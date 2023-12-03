@@ -1,0 +1,112 @@
+[
+  {
+    "EmployeeId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Email": "john.doe@example.com",
+    "PhoneNumber": "1234567890",
+    "Address": "123 Main St",
+    "StartDate": "2022-01-01",
+    "Department": "Engineering",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "4fa85f64-5717-4562-b3fc-2c963f66afa7",
+    "FirstName": "Jane",
+    "LastName": "Doe",
+    "Email": "jane.doe@example.com",
+    "PhoneNumber": "0987654321",
+    "Address": "456 Main St",
+    "StartDate": "2022-02-01",
+    "Department": "Marketing",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "5fa85f64-5717-4562-b3fc-2c963f66afa8",
+    "FirstName": "Alice",
+    "LastName": "Smith",
+    "Email": "alice.smith@example.com",
+    "PhoneNumber": "1122334455",
+    "Address": "789 Main St",
+    "StartDate": "2022-03-01",
+    "Department": "Sales",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "6fa85f64-5717-4562-b3fc-2c963f66afa9",
+    "FirstName": "Bob",
+    "LastName": "Johnson",
+    "Email": "bob.johnson@example.com",
+    "PhoneNumber": "2233445566",
+    "Address": "1011 Main St",
+    "StartDate": "2022-04-01",
+    "Department": "HR",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "7fa85f64-5717-4562-b3fc-2c963f66afaa",
+    "FirstName": "Charlie",
+    "LastName": "Brown",
+    "Email": "charlie.brown@example.com",
+    "PhoneNumber": "3344556677",
+    "Address": "1213 Main St",
+    "StartDate": "2022-05-01",
+    "Department": "Finance",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "8fa85f64-5717-4562-b3fc-2c963f66afab",
+    "FirstName": "David",
+    "LastName": "Davis",
+    "Email": "david.davis@example.com",
+    "PhoneNumber": "4455667788",
+    "Address": "1415 Main St",
+    "StartDate": "2022-06-01",
+    "Department": "Engineering",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "9fa85f64-5717-4562-b3fc-2c963f66afac",
+    "FirstName": "Emily",
+    "LastName": "Evans",
+    "Email": "emily.evans@example.com",
+    "PhoneNumber": "5566778899",
+    "Address": "1617 Main St",
+    "StartDate": "2022-07-01",
+    "Department": "Marketing",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "afa85f64-5717-4562-b3fc-2c963f66afad",
+    "FirstName": "Frank",
+    "LastName": "Franklin",
+    "Email": "frank.franklin@example.com",
+    "PhoneNumber": "6677889900",
+    "Address": "1819 Main St",
+    "StartDate": "2022-08-01",
+    "Department": "Sales",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "bfa85f64-5717-4562-b3fc-2c963f66afae",
+    "FirstName": "Grace",
+    "LastName": "Green",
+    "Email": "grace.green@example.com",
+    "PhoneNumber": "7788990011",
+    "Address": "2021 Main St",
+    "StartDate": "2022-09-01",
+    "Department": "HR",
+    "Status": "Active"
+  },
+  {
+    "EmployeeId": "cfa85f64-5717-4562-b3fc-2c963f66afaf",
+    "FirstName": "Harry",
+    "LastName": "Hill",
+    "Email": "harry.hill@example.com",
+    "PhoneNumber": "8899001122",
+    "Address": "2223 Main St",
+    "StartDate": "2022-10-01",
+    "Department": "Finance",
+    "Status": "Active"
+  }
+]

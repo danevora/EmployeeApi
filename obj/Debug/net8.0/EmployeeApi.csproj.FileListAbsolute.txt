@@ -30,3 +30,4 @@ C:\Users\danie\repos\EmployeeApi\obj\Debug\net8.0\refint\EmployeeApi.dll
 C:\Users\danie\repos\EmployeeApi\obj\Debug\net8.0\EmployeeApi.pdb
 C:\Users\danie\repos\EmployeeApi\obj\Debug\net8.0\EmployeeApi.genruntimeconfig.cache
 C:\Users\danie\repos\EmployeeApi\obj\Debug\net8.0\ref\EmployeeApi.dll
+C:\Users\danie\repos\EmployeeApi\obj\Debug\net8.0\EmployeeApi.sourcelink.json
