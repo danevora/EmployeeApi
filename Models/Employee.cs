@@ -51,7 +51,6 @@ public class Employee
   [Required]
   [DataType(DataType.Date)]
   [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
-  [DateNotInTheFuture]
   public DateTime StartDate { get; set; }
 
   /// <summary>
@@ -67,23 +66,4 @@ public class Employee
   [Required]
   [StringLength(50)]
   public required string Status { get; set; }
-}
-
-/// <summary>
-/// Custom validation attribute to ensure that a date is not in the future.
-/// </summary>
-public class DateNotInTheFutureAttribute : ValidationAttribute
-{
-  public override bool IsValid(object value)
-  {
-    DateTime date;
-    if (DateTime.TryParse(value.ToString(), out date))
-    {
-      if (date > DateTime.Now)
-      {
-        return false;
-      }
-    }
-    return true;
-  }
 }
