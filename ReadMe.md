@@ -6,7 +6,6 @@ This application is a simple Employee Management System built with ASP.NET Core 
 
 - .NET Core 3.1 or later
 - Entity Framework Core 3.1 or later
-- SQL Server 2019 or later
 
 ## Running the Application
 
