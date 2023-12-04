@@ -51,6 +51,12 @@ namespace EmployeeApi.Controllers
                 return BadRequest();
             }
 
+            // Check if an employee with the same email already exists
+            if (_context.Employees.Any(e => e.Email == employee.Email && e.Id != id))
+            {
+                return Conflict(new { message = "An employee with this email already exists." });
+            }
+
             _context.Entry(employee).State = EntityState.Modified;
 
             try
@@ -62,17 +68,6 @@ namespace EmployeeApi.Controllers
                 if (!EmployeeExists(id))
                 {
                     return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-            catch (DbUpdateException)
-            {
-                if (_context.Employees.Any(e => e.Email == employee.Email))
-                {
-                    return Conflict(new { message = "An employee with this email already exists." });
                 }
                 else
                 {
