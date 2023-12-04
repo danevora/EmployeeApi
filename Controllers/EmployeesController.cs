@@ -51,6 +51,11 @@ namespace EmployeeApi.Controllers
                 return BadRequest();
             }
 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             // Check if an employee with the same email already exists
             if (_context.Employees.Any(e => e.Email == employee.Email && e.Id != id))
             {
@@ -82,6 +87,11 @@ namespace EmployeeApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Employee>> PostEmployee(Employee employee)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             _context.Employees.Add(employee);
             try
             {
