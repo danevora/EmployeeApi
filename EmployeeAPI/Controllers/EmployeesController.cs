@@ -48,7 +48,7 @@ namespace EmployeeApi.Controllers
             // We prevent the update of the Id property
             if (id != employee.Id)
             {
-                return BadRequest();
+                return BadRequest(new { message = "The specified employee ID does not match the ID in the request body." });
             }
 
             if (!ModelState.IsValid)
