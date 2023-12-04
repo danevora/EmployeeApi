@@ -10,7 +10,7 @@ public class EmployeeContext : DbContext
   {
   }
 
-  public DbSet<Employee> Employees { get; set; } = null!;
+  public virtual DbSet<Employee> Employees { get; set; }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
