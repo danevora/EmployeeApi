@@ -80,6 +80,7 @@ Once the application is running, you can access the Swagger UI to test the API e
    - Test when the specified employee ID does not match the ID in the request body. Expext 400.
    - Test when the model state is invalid. Expect 400.
    - Test when an employee with the same email already exists. Expect 409.
+   - Test when the specified employee ID does not exist in the database. Expect 404.
    - Test when the specified employee ID exists in the database and the model is valid. Expect 204.
 4. `POST: api/Employees`
    - Test when the model state is invalid. Expect 400.
