@@ -27,7 +27,7 @@ namespace EmployeeApi.Controllers
             return await _context.Employees.ToListAsync();
         }
 
-        // GET: api/Employees/5
+        // GET: api/Employees/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<Employee>> GetEmployee(string id)
         {
@@ -41,12 +41,12 @@ namespace EmployeeApi.Controllers
             return employee;
         }
 
-        // PUT: api/Employees/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: api/Employees/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee(string id, Employee employee)
         {
-            if (id != employee.EmployeeId)
+            // We prevent the update of the Id property
+            if (id != employee.Id)
             {
                 return BadRequest();
             }
@@ -59,7 +59,7 @@ namespace EmployeeApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmployeeExists(id))
+                if (!EmployeeExists(id, employee.Email))
                 {
                     return NotFound();
                 }
@@ -73,7 +73,6 @@ namespace EmployeeApi.Controllers
         }
 
         // POST: api/Employees
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Employee>> PostEmployee(Employee employee)
         {
@@ -84,7 +83,7 @@ namespace EmployeeApi.Controllers
             }
             catch (DbUpdateException)
             {
-                if (EmployeeExists(employee.EmployeeId))
+                if (EmployeeExists(employee.Id, employee.Email))
                 {
                     return Conflict();
                 }
@@ -94,10 +93,10 @@ namespace EmployeeApi.Controllers
                 }
             }
 
-            return CreatedAtAction("GetEmployee", new { id = employee.EmployeeId }, employee);
+            return CreatedAtAction(nameof(GetEmployee), new { id = employee.Id }, employee);
         }
 
-        // DELETE: api/Employees/5
+        // DELETE: api/Employees/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee(string id)
         {
@@ -113,9 +112,9 @@ namespace EmployeeApi.Controllers
             return NoContent();
         }
 
-        private bool EmployeeExists(string id)
+        private bool EmployeeExists(string id, string email)
         {
-            return _context.Employees.Any(e => e.EmployeeId == id);
+            return _context.Employees.Any(e => e.Id == id || e.Email == email);
         }
     }
 }

@@ -8,7 +8,7 @@ public class Employee
   /// <summary>
   /// The unique identifier for the employee.
   /// </summary>
-  public string? EmployeeId { get; set; }
+  public required string Id { get; set; }
 
   /// <summary>
   /// The first name of the employee. Max length 50.
