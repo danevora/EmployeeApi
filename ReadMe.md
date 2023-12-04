@@ -55,38 +55,38 @@ Once the application is running, you can access the Swagger UI to test the API e
 ## Interfaces
 
 1. `Employee.cs` – the employee data object model
-   a. `Id`
-   b. `FirstName`
-   c. `LastName`
-   d. `Email`
-   e. `PhoneNumber`
-   f. `Address`
-   g. `StartDate`
-   h. `Department`
-   i. `Status`
-   j. In the future, developers may consider creating a data transfer object, where the `Id` field becomes system managed instead of supplied by the client application.
+   - `Id`
+   - `FirstName`
+   - `LastName`
+   - `Email`
+   - `PhoneNumber`
+   - `Address`
+   - `StartDate`
+   - `Department`
+   - `Status`
+   - In the future, developers may consider creating a data transfer object, where the `Id` field becomes system managed instead of supplied by the client application.
 2. `EmployeeContext.cs` – the employee database context model
-   a. `Employees` – The database set provided by Entity Framework for interacting with Employee objects in our database.
-   b. This is the database context model we will use to host our in-memory database for testing our APIs.
+   - `Employees` – The database set provided by Entity Framework for interacting with Employee objects in our database,
+   - This is the database context model we will use to host our in-memory database for testing our APIs.
 
 ## Tests
 
 1. `GET: api/Employees`
-   a. Test when the database is empty.
-   b. Test when the database has one or more employees.
+   - Test when the database is empty.
+   - Test when the database has one or more employees.
 2. `GET: api/Employees/{id}`
-   a. Test when the specified employee ID does not exist in the database.
-   b. Test when the specified employee ID exists in the database.
+   - Test when the specified employee ID does not exist in the database.
+   - Test when the specified employee ID exists in the database.
 3. `PUT: api/Employees/{id}`
-   a. Test when the specified employee ID does not match the ID in the request body.
-   b. Test when the model state is invalid.
-   c. Test when an employee with the same email already exists.
-   d. Test when the specified employee ID exists in the database and the model is valid.
+   - Test when the specified employee ID does not match the ID in the request body.
+   - Test when the model state is invalid.
+   - Test when an employee with the same email already exists.
+   - Test when the specified employee ID exists in the database and the model is valid.
 4. `POST: api/Employees`
-   a. Test when the model state is invalid.
-   b. Test when an employee with the same email already exists.
-   c. Test when an employee with the same ID already exists.
-   d. Test when the request is valid.
+   - Test when the model state is invalid.
+   - Test when an employee with the same email already exists.
+   - Test when an employee with the same ID already exists.
+   - Test when the request is valid.
 5. `DELETE: api/Employees/{id}`
-   a. Test when the specified employee ID does not exist in the database.
-   b. Test when the specified employee ID exists in the database.
+   - Test when the specified employee ID does not exist in the database.
+   - Test when the specified employee ID exists in the database.
