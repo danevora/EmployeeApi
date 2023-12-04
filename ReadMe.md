@@ -71,21 +71,21 @@ Once the application is running, you can access the Swagger UI to test the API e
 ## Tests
 
 1. `GET: api/Employees`
-   - Test when the database is empty.
-   - Test when the database has one or more employees.
+   - Test when the database is empty. Expect an empty array.
+   - Test when the database has one or more employees. Expect 200 with employee object(s).
 2. `GET: api/Employees/{id}`
-   - Test when the specified employee ID does not exist in the database.
-   - Test when the specified employee ID exists in the database.
+   - Test when the specified employee ID does not exist in the database. Expect 404.
+   - Test when the specified employee ID exists in the database. Expect 200 with the correct employee object.
 3. `PUT: api/Employees/{id}`
-   - Test when the specified employee ID does not match the ID in the request body.
-   - Test when the model state is invalid.
-   - Test when an employee with the same email already exists.
-   - Test when the specified employee ID exists in the database and the model is valid.
+   - Test when the specified employee ID does not match the ID in the request body. Expext 400.
+   - Test when the model state is invalid. Expect 400.
+   - Test when an employee with the same email already exists. Expect 409.
+   - Test when the specified employee ID exists in the database and the model is valid. Expect 204.
 4. `POST: api/Employees`
-   - Test when the model state is invalid.
-   - Test when an employee with the same email already exists.
-   - Test when an employee with the same ID already exists.
-   - Test when the request is valid.
+   - Test when the model state is invalid. Expect 400.
+   - Test when an employee with the same email already exists. Expect 409.
+   - Test when an employee with the same ID already exists. Expect 409.
+   - Test when the request is valid. Expect 201 with correct employee object.
 5. `DELETE: api/Employees/{id}`
-   - Test when the specified employee ID does not exist in the database.
-   - Test when the specified employee ID exists in the database.
+   - Test when the specified employee ID does not exist in the database. Expect 404.
+   - Test when the specified employee ID exists in the database. Expect 204.
