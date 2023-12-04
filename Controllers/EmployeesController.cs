@@ -59,7 +59,7 @@ namespace EmployeeApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmployeeExists(id, employee.Email))
+                if (!EmployeeExists(id))
                 {
                     return NotFound();
                 }
@@ -83,7 +83,7 @@ namespace EmployeeApi.Controllers
             }
             catch (DbUpdateException)
             {
-                if (EmployeeExists(employee.Id, employee.Email))
+                if (EmployeeExists(employee.Id))
                 {
                     return Conflict();
                 }
@@ -112,9 +112,9 @@ namespace EmployeeApi.Controllers
             return NoContent();
         }
 
-        private bool EmployeeExists(string id, string email)
+        private bool EmployeeExists(string id)
         {
-            return _context.Employees.Any(e => e.Id == id || e.Email == email);
+            return _context.Employees.Any(e => e.Id == id);
         }
     }
 }
