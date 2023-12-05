@@ -26,7 +26,7 @@ Once the application is running, you can access the Swagger UI to test the API e
 
 ## Architecture
 
-![Architecture Diagram](Architecture.png)
+![Architecture Diagram](architecture.png)
 
 ## Assumptions
 
@@ -37,7 +37,7 @@ Once the application is running, you can access the Swagger UI to test the API e
 3. **Data Store**: We will use an Internal Database Context to store data for the purpose of this exercise. In an enterprise application, we would like to use an elastically scaling database with flexible data modeling, such as CosmosDB.
 4. **Error Handling**: Error handling is simplified for the purpose of this exercise. Simple error codes are sufficient, although in an enterprise application more detailed error handling mechanisms may be required.
 5. **Logging and Monitoring**: The use of basic logging for debugging purposes, but detailed logging for telemetry and metric reporting are not in scope for this exercise.
-6. **Security**: Communication between clients and our microservice is over HTTPS. Input validation is basic and focused on preventing obvious security vulnerabilities. 
+6. **Security**: Communication between clients and our microservice is over HTTPS. Input validation is basic and focused on preventing obvious security vulnerabilities.
 7. **Documentation**: Detailed documentation is not required for this exercise. Comments will be used in code where necessary.
 8. **Testing**: Unit tests to test code local to the repository are sufficient for this exercise. System integration tests are out of scope but would be required in an enterprise application. Since no code is required for tests in this exercise, we will create the test project and outline the tests in a xUnit test file. Performance and load testing should be handled using another tool such as Apache JMeter.
 9. **Concurrency and Transactions**: We will omit complex concurrency control mechanisms for simplicity and assume a single-threaded model. Transactions are straightforward and there are no complex scenarios involving distributed scenarios.
