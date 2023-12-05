@@ -26,7 +26,7 @@ Once the application is running, you can access the Swagger UI to test the API e
 
 ## Architecture
 
-![Architecture Diagram](diagram.png)
+![Architecture Diagram](Architecture.png)
 
 ## Assumptions
 
