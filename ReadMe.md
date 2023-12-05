@@ -33,7 +33,7 @@ Once the application is running, you can access the Swagger UI to test the API e
 ### Application Assumptions:
 
 1. **ActionResult of EmployeeController**: Assume the clients consuming our microservice are responsible for displaying employee data to end-users. So, our microservice will only be responsible for performing the CRUD operations on employee data and returning JsonResult where applicable (Create, Read).
-2. **Authentication/Authorization**: Clients are responsible for authentication and will include a valid authentication token in the request header. For the purpose of this exercise, we won't require a JWT tokem when testing through Swagger UI, but requests will be sent over HTTPS.
+2. **Authentication/Authorization**: Clients are responsible for authentication and will include a valid authentication token in the request header. For the purpose of this exercise, we won't require a JWT token when testing through Swagger UI, but requests will be sent over HTTPS.
 3. **Data Store**: We will use an Internal Database Context to store data for the purpose of this exercise. In an enterprise application, we would like to use an elastically scaling database with flexible data modeling, such as CosmosDB.
 4. **Error Handling**: Error handling is simplified for the purpose of this exercise. Simple error codes are sufficient, although in an enterprise application more detailed error handling mechanisms may be required.
 5. **Logging and Monitoring**: The use of basic logging for debugging purposes, but detailed logging for telemetry and metric reporting are not in scope for this exercise.
